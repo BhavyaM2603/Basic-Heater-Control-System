@@ -60,7 +60,6 @@ ________________________________________________________________________________
 🚀 Try It Yourself
 
 👉 Click to Open Wokwi Simulation: https://wokwi.com/projects/439422033010160641
-(Replace with your live simulation link once uploaded)
 
 Press Run
 
