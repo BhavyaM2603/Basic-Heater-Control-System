@@ -1,83 +1,102 @@
-🔥 Heater Control System using Arduino Uno and DHT22
+🔥 Smart Heater Control System (Simulation Project)
 
-A temperature-based heater control simulation using Arduino Uno and a DHT22 sensor, implemented with a 5-state logic system. The project demonstrates how embedded systems can manage heating safely and intelligently, with state transitions, serial logging, and actuator control.
+Built with: Arduino Uno · DHT22 · C++ · Wokwi Simulator
+Role: Embedded Systems Developer (solo project)
+Goal: Simulate a safe, state-driven heater control system with real-time feedback and fail-safes.
 
-📌 Features
+✅ Project Highlights
 
-✅ 5-state control logic:
+Real-Time Temperature Monitoring:
+Continuously reads temperature & humidity from a DHT22 sensor.
 
-IDLE, HEATING, STABILIZING, TARGET REACHED, OVERHEAT
+State Machine Control Logic:
+Implements 5 well-defined states:
+IDLE → HEATING → STABILIZING → TARGET REACHED → OVERHEAT
 
-✅ Real-time temperature and humidity monitoring (DHT22)
+Actuator Control:
 
-✅ Heater simulation using LED
+LED = Heater ON/OFF indicator
 
-✅ Overheat alert via Buzzer
+Buzzer = Overheat alert (triggered at 50 °C)
 
-✅ Serial logging for debugging and status monitoring
+Serial Logging:
+Logs temp, humidity, and current state every 2 seconds.
 
-⚙️ Fully simulated in Wokwi
+Tested in Simulation:
+Fully simulated in Wokwi (Wokwi.com), adjustable temperature slider to test all states.
 
-🧠 State Logic Summary
-State	Trigger	Heater (LED)	Buzzer
-IDLE	System start or temp ≥ target	OFF	OFF
-HEATING	Temp < 39 °C	ON	OFF
-STABILIZING	Temp between 39–40 °C	ON	OFF
-TARGET REACHED	Temp ≥ 40 °C and < 50 °C	OFF	OFF
-OVERHEAT	Temp ≥ 50 °C	OFF	ON
-🔧 Components Used
-Component	Function	Pin Mapping (Wokwi)
-Arduino Uno	Microcontroller	—
-DHT22 Sensor	Temp & humidity input	DATA → D2
-LED	Heater simulation	A → D4, C → GND
-Buzzer	Overheat alert	+ → D5, – → GND
-🚦 How It Works
+💡 What I Demonstrated
 
-DHT22 provides temperature and humidity readings.
+Designing and coding embedded control logic from scratch
 
-Based on thresholds, Arduino determines current state.
+Working with sensor data, thresholds, and hysteresis
 
-Heater (LED) turns ON/OFF depending on heating state.
+Implementing safety-oriented feedback (visual + audible)
 
-Buzzer activates when temperature exceeds 50 °C.
+Writing clean, testable Arduino code with state transitions
 
-Serial Monitor logs:
+Documenting system design clearly for hardware scalability
 
-Temp: 42.00 °C | Humidity: 45.00% | State: TARGET REACHED
+🧠 System Behavior Summary
+Temperature	State	Heater (LED)	Buzzer
+< 39 °C	HEATING	ON	OFF
+39–40 °C	STABILIZING	ON	OFF
+40–49.9 °C	TARGET REACHED	OFF	OFF
+≥ 50 °C	OVERHEAT	OFF	ON
+⚙️ Tools & Stack
 
-🧪 Simulation Instructions
+Board: Arduino Uno (ATmega328P)
 
-Open the project in Wokwi.
+Sensor: DHT22 (Digital Temp + Humidity)
 
-Press Run.
+Actuators: LED (GPIO 4), Buzzer (GPIO 5)
 
-Click the DHT22 sensor and adjust temperature slider.
+Language: Arduino C++
 
-Observe:
+Simulation: Wokwi Online Simulator
 
-LED turns ON during HEATING
+Libraries: Adafruit DHT sensor library
 
-Buzzer activates in OVERHEAT
+🚀 Try It Yourself
 
-Serial Monitor logs real-time data
+👉 Click to Open Wokwi Simulation: https://wokwi.com/projects/439422033010160641
+(Replace with your live simulation link once uploaded)
 
-📁 File Structure
-heater-control-project/
-├── heater_control.ino     # Arduino sketch
-├── diagram.json           # Wokwi simulation wiring
-├── wokwi.toml             # Library dependencies
-├── README.md              # Project overview and instructions
-├── system_design.docx     # Part 1 (System Design)
-└── embedded_implementation.docx # Part 2 (Implementation)
+Press Run
 
-🛠 Future Improvements
+Click on the DHT22 sensor
 
-BLE communication (e.g., ESP32 + mobile app)
+Use the slider to change temperature and observe:
 
-Multiple heating profiles
+LED turns ON when heating
 
-LCD/OLED display for real-time status
+Buzzer triggers at overheat
 
-PID-based temperature control
+Serial Monitor logs real-time system state
 
-Humidity-based safety shutoff
+🧭 What's Next (Roadmap)
+
+Port to ESP32 for wireless features (BLE, WiFi)
+
+Add LCD/OLED display for real-time feedback
+
+Implement PID control loop for smooth heating
+
+Store heating profiles in EEPROM
+
+Build a mobile UI for remote control
+
+📁 Repository Structure
+📦 heater-control-system/
+├── heater_control.ino     → Core logic (Arduino sketch)
+├── diagram.json           → Wiring setup for Wokwi
+├── wokwi.toml             → Library dependencies
+├── README.md              → You’re here
+├── system_design.docx     → Part 1: Design document
+└── embedded_implementation.docx → Part 2: Implementation report
+
+🧑‍💻 About Me
+
+I'm an aspiring embedded systems engineer with hands-on experience in building real-time control systems using Arduino, ESP32, and simulation platforms. I enjoy solving hardware-software interfacing problems and turning raw sensor data into real-world control actions.
+
+📫 [Add your email, LinkedIn, or GitHub profile link here]
