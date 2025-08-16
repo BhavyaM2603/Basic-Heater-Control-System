@@ -88,7 +88,7 @@ Build a mobile UI for remote control
 📁 Repository Structure
 📦 basic-heater-system/
 
-├── heater_control.ino     → Core logic (Arduino sketch)
+├── sketch.ino     → Core logic (Arduino sketch)
 
 ├── diagram.json           → Wiring setup for Wokwi
 
