@@ -3,7 +3,7 @@
 Built with: Arduino Uno · DHT22 · C++ · Wokwi Simulator
 Role: Embedded Systems Developer (solo project)
 Goal: Simulate a safe, state-driven heater control system with real-time feedback and fail-safes.
-
+_________________________________________________________________________________________________________________________________________________
 ✅ Project Highlights
 
 Real-Time Temperature Monitoring:
@@ -24,7 +24,7 @@ Logs temp, humidity, and current state every 2 seconds.
 
 Tested in Simulation:
 Fully simulated in Wokwi (Wokwi.com), adjustable temperature slider to test all states.
-
+___________________________________________________________________________________________________________________________________________________________________________
 💡 What I Demonstrated
 
 Designing and coding embedded control logic from scratch
@@ -36,7 +36,7 @@ Implementing safety-oriented feedback (visual + audible)
 Writing clean, testable Arduino code with state transitions
 
 Documenting system design clearly for hardware scalability
-
+__________________________________________________________________________________________________________________________________________________________________________________
 🧠 System Behavior Summary
 Temperature	State	Heater (LED)	Buzzer
 < 39 °C	HEATING	ON	OFF
@@ -56,7 +56,7 @@ Language: Arduino C++
 Simulation: Wokwi Online Simulator
 
 Libraries: Adafruit DHT sensor library
-
+______________________________________________________________________________________________________________________________________________________________________________
 🚀 Try It Yourself
 
 👉 Click to Open Wokwi Simulation: https://wokwi.com/projects/439422033010160641
