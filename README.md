@@ -87,7 +87,8 @@ Store heating profiles in EEPROM
 Build a mobile UI for remote control
 
 📁 Repository Structure
-📦 heater-control-system/
+📦 basic-heater-system/
+
 ├── heater_control.ino     → Core logic (Arduino sketch)
 
 ├── diagram.json           → Wiring setup for Wokwi
